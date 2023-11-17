@@ -1,0 +1,56 @@
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin:auto;
+  background-color: var(--header-background);
+  color: var(--header-color);
+  
+}
+
+.logo a {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; 
+}
+
+.navigation li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.themeSwitcher {
+  background: #555; 
+  border: none;
+  border-radius: 15px;
+  color: #eeeaea;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+
+
+
+/* Theme styles */
+.light {
+  --header-background: #eee; 
+  --header-color: #bababa;
+}
+
+.dark {
+  --header-background: #333; 
+  --header-color: #ddd;
+}
+
