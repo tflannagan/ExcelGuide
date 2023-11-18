@@ -26,7 +26,7 @@
 }
 
 .app.dark {
-  --background-color: #2a2a2ac8;
+  --background-color: #2a2a2af4;
   --text-color: #e7e7e7;
  
 }
@@ -35,5 +35,5 @@ body, .app {
   background-color: var(--background-color);
   color: var(--text-color);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
 }

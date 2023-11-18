@@ -25,7 +25,7 @@ const FormulaPage = () => {
       <div className={styles.searchBar}>
         <input
           type="text"
-          placeholder="Search formulas..."
+          placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
           className={styles.searchInput} // Make sure you have styles for this

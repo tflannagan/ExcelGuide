@@ -18,11 +18,15 @@ const Header = () => {
       </div>
       <nav className={styles.navigation}>
         <ul>
-          <li className={styles.navTitle}>
-            <Link to="/hotkeys">Hotkeys</Link>
+          <li>
+            <Link to="/hotkeys">
+              <p className={styles.navTitle}>Hotkeys</p>
+            </Link>
           </li>
-          <li className={styles.navTitle}>
-            <Link to="/formulas">Formulas</Link>
+          <li>
+            <Link to="/formulas">
+              <p className={styles.navTitle}>Formulas</p>
+            </Link>
           </li>
         </ul>
       </nav>
