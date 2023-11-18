@@ -20,8 +20,6 @@ const formulasData = [
     description: "Finds the minimum value in a range",
     usage: "=MIN(A1:A10)",
   },
-
-  // Sourced from Simplilearn&#8203;``【oaicite:23】``&#8203;&#8203;``【oaicite:22】``&#8203;&#8203;``【oaicite:21】``&#8203;&#8203;``【oaicite:20】``&#8203;&#8203;``【oaicite:19】``&#8203;&#8203;``【oaicite:18】``&#8203;&#8203;``【oaicite:17】``&#8203;&#8203;``【oaicite:16】``&#8203;&#8203;``【oaicite:15】``&#8203;&#8203;``【oaicite:14】``&#8203;&#8203;``【oaicite:13】``&#8203;&#8203;``【oaicite:12】``&#8203;&#8203;``【oaicite:11】``&#8203;&#8203;``【oaicite:10】``&#8203;&#8203;``【oaicite:9】``&#8203;&#8203;``【oaicite:8】``&#8203;&#8203;``【oaicite:7】``&#8203;&#8203;``【oaicite:6】``&#8203;&#8203;``【oaicite:5】``&#8203;&#8203;``【oaicite:4】``&#8203;&#8203;``【oaicite:3】``&#8203;&#8203;``【oaicite:2】``&#8203;&#8203;``【oaicite:1】``&#8203;&#8203;``【oaicite:0】``&#8203;
   {
     name: "COUNT",
     description: "Counts the number of cells that contain numbers",
@@ -137,6 +135,134 @@ const formulasData = [
     description:
       "Calculates the number of days, months, or years between two dates",
     usage: '=DATEDIF(start_date, end_date, "unit")',
+  },
+  {
+    name: "FV",
+    description: "Calculate future value of an investment",
+    usage: "=FV(rate, nper, pmt, [pv], [type])",
+  },
+  {
+    name: "RATE",
+    description: "Calculate interest rate for a loan or investment",
+    usage: "=RATE(nper, pmt, pv, [fv], [type], [guess])",
+  },
+  {
+    name: "PRICE",
+    description: "Calculate price of a security that pays periodic interest",
+    usage:
+      "=PRICE(settlement, maturity, rate, yld, redemption, frequency, [basis])",
+  },
+  {
+    name: "GEOMEAN",
+    description: "Calculate geometric mean",
+    usage: "=GEOMEAN(number1, [number2], ...)",
+  },
+  {
+    name: "CUMIPMT",
+    description:
+      "Calculate cumulative interest over a range of payment periods",
+    usage: "=CUMIPMT(rate, nper, pv, start_period, end_period, type)",
+  },
+  {
+    name: "CUMPRINC",
+    description: "Calculate cumulative principal paid over a range of periods",
+    usage: "=CUMPRINC(rate, nper, pv, start_period, end_period, type)",
+  },
+  {
+    name: "PPMT",
+    description:
+      "Calculate payment on the principal for an investment based on constant payments and a constant interest rate",
+    usage: "=PPMT(rate, per, nper, pv, [fv], [type])",
+  },
+  {
+    name: "EFFECT",
+    description: "Calculate the effective annual interest rate",
+    usage: "=EFFECT(nominal_rate, npery)",
+  },
+  {
+    name: "STOCKHISTORY",
+    description: "Retrieve historical stock price data",
+    usage:
+      "=STOCKHISTORY(stock, start_date, [end_date], [interval], [headers], [property0], [property1], ...)",
+  },
+  { name: "PI", description: "Return the value of PI", usage: "=PI()" },
+  {
+    name: "POWER",
+    description: "Return the result of a number raised to a power",
+    usage: "=POWER(number, power)",
+  },
+  {
+    name: "SQRT",
+    description: "Return the square root of a number",
+    usage: "=SQRT(number)",
+  },
+  {
+    name: "NPER",
+    description:
+      "Calculate the number of periods for an investment based on periodic, constant payments and a constant interest rate",
+    usage: "=NPER(rate, pmt, pv, [fv], [type])",
+  },
+  {
+    name: "PV",
+    description: "Calculate the present value of a loan or an investment",
+    usage: "=PV(rate, nper, pmt, [fv], [type])",
+  },
+  {
+    name: "TEXTJOIN",
+    description:
+      "Combine text from multiple ranges, and each item is separated by a delimiter",
+    usage: "=TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)",
+  },
+  {
+    name: "MID",
+    description:
+      "Return a specific number of characters from a text string starting at the position you specify",
+    usage: "=MID(text, start_num, num_chars)",
+  },
+  {
+    name: "TEXTSPLIT",
+    description:
+      "Split text into an array of text strings based on a delimiter",
+    usage:
+      "=TEXTSPLIT(text, [column_delimiter], [row_delimiter], [ignore_empty], [pad_with])",
+  },
+  {
+    name: "INDIRECT",
+    description: "Return the reference specified by a text string",
+    usage: "=INDIRECT(ref_text, [a1])",
+  },
+  {
+    name: "SEQUENCE",
+    description:
+      "Generate a list of sequential numbers in an array, such as 1, 2, 3, 4",
+    usage: "=SEQUENCE(rows, [columns], [start], [step])",
+  },
+  {
+    name: "LET",
+    description: "Assign names to calculation results",
+    usage: "=LET(name1, name_value1, [name2], [name_value2], ..., calculation)",
+  },
+  {
+    name: "SCAN",
+    description:
+      "Scan a range or array and apply a lambda function to each item",
+    usage: "=SCAN(initial_value, array, lambda)",
+  },
+  {
+    name: "IPMT",
+    description:
+      "Calculate the interest payment for a given period for an investment based on periodic, constant payments and a constant interest rate",
+    usage: "=IPMT(rate, per, nper, pv, [fv], [type])",
+  },
+  {
+    name: "HSTACK",
+    description: "Stack arrays horizontally",
+    usage: "=HSTACK(array1, [array2], ...)",
+  },
+  {
+    name: "VSTACK",
+    description: "Stack arrays vertically",
+    usage: "=VSTACK(array1, [array2], ...)",
   },
 ];
 

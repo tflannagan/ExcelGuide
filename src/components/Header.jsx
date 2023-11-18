@@ -31,7 +31,7 @@ const Header = () => {
         </ul>
       </nav>
       <button onClick={toggleTheme} className={styles.themeSwitcher}>
-        💡
+        <span className="material-symbols-outlined">light_mode</span>
       </button>
     </header>
   );

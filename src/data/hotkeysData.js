@@ -19,6 +19,47 @@ const hotkeysData = [
   { command: "Save workbook", keys: "Ctrl + S" },
   { command: "Move between sheets", keys: "Ctrl + Page Up/Page Down" },
   { command: "Create a table", keys: "Ctrl + T" },
+  {
+    command: "Select the first/last cell of a region moving up",
+    keys: "Ctrl + ↑",
+  },
+  {
+    command: "Select the first/last cell of a region moving right",
+    keys: "Ctrl + →",
+  },
+  {
+    command: "Select the first/last cell of a region moving down",
+    keys: "Ctrl + ↓",
+  },
+  {
+    command: "Select the first/last cell of a region moving left",
+    keys: "Ctrl + ←",
+  },
+  { command: "Find next match", keys: "Shift + F4" },
+  { command: "Find previous match", keys: "Ctrl + Shift + F4" },
+  {
+    command: "Apply Currency format to selected cells",
+    keys: "Ctrl + Shift + $",
+  },
+  {
+    command: "Apply Percent format to selected cells",
+    keys: "Ctrl + Shift+ %",
+  },
+  { command: "Apply Time format to selected cells", keys: "Ctrl + Shift + @" },
+  { command: "Open Delete window", keys: "Ctrl + -" },
+  { command: "Delete rows (with rows selected)", keys: "Ctrl + -" },
+  { command: "AutoFit Column Width", keys: "Alt, H, O, I" },
+  { command: "Format Window for cells and objects", keys: "Ctrl + 1" },
+  { command: "Apply or remove bold formatting", keys: "Ctrl + B" },
+  { command: "Apply or remove italic formatting", keys: "Ctrl + I" },
+  { command: "Apply or remove underscoring", keys: "Ctrl + U" },
+  { command: "Left Align", keys: "Alt, H, A, L" },
+  { command: "Center Align", keys: "Alt, H, A, C" },
+  { command: "Right Align", keys: "Alt, H, A, R" },
+  { command: "Top Align", keys: "Alt, H, A, T" },
+  { command: "Middle Align", keys: "Alt, H, A, M" },
+  { command: "Bottom Align", keys: "Alt, H, A, B" },
+  { command: "Wrap Text", keys: "Alt, H, W" },
 ];
 
 export default hotkeysData;
