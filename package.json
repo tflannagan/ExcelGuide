@@ -2,6 +2,7 @@
   "name": "excel-guide",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://tflannagan.github.io/ExcelGuide/",
   "type": "module",
   "scripts": {
     "dev": "vite",
