@@ -43,3 +43,5 @@ Below are some examples used for Excel formulas:
 ## Contributing
 
 This project is purely for educational purposes, but thank you 🥰
+
+- ## :computer: [Live Site](https://tflannagan.github.io/ExcelGuide/)
