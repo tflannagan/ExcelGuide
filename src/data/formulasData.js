@@ -264,6 +264,53 @@ const formulasData = [
     description: "Stack arrays vertically",
     usage: "=VSTACK(array1, [array2], ...)",
   },
+  {
+    name: "Count between dates by age range",
+    description: "Counts dates by age range",
+    usage: "COUNTIFS, FIND, LEFT, RIGHT, SUMPRODUCT, TEXTBEFORE",
+  },
+  {
+    name: "Count birthdays by year",
+    description: "Counts the number of birthdays in a specific year",
+    usage: "SUMPRODUCT, YEAR, COUNTIFS, BYROW, UNIQUE, SORT, LET",
+  },
+  {
+    name: "Count cells between dates",
+    description: "Counts cells that contain dates within a specified range",
+    usage: "COUNTIFS, SUMPRODUCT",
+  },
+
+  {
+    name: "Calculate running total",
+    description: "Calculates a running total or cumulative sum",
+    usage: "SUM, SCAN",
+  },
+  {
+    name: "Count cells that contain formulas",
+    description: "Counts cells containing formulas",
+    usage: "SUMPRODUCT, ISFORMULA, NOT",
+  },
+  {
+    name: "Subtotal by color",
+    description: "Calculates a subtotal based on a specific cell color",
+    usage: "SUMIF, COUNTIF",
+  },
+
+  {
+    name: "Average and ignore errors",
+    description: "Calculates the average of values, ignoring errors",
+    usage: "AVERAGEIF, AGGREGATE, AVERAGE, IFERROR, FILTER",
+  },
+  {
+    name: "Average by group",
+    description: "Calculates the average within each group of a dataset",
+    usage: "UNIQUE, AVERAGEIFS",
+  },
+  {
+    name: "Average call time per month",
+    description: "Calculates the average call time per month",
+    usage: "AVERAGEIFS, EDATE, FILTER, AVERAGE, TEXT",
+  },
 ];
 
 export default formulasData;

@@ -1,24 +1,11 @@
-
-/* 
-.light {
-  --header-background: #eee; 
-  --header-color: #121212;
-}
-
-.dark {
-  --header-background: #333; 
-  --header-color: #ddd;
-} */
-
 .dashboardContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   padding: 1rem;
   margin: 0.5rem 1rem 1rem 1rem;
-  min-height: 100vh; /* Ensure it fills at least the whole height of the viewport */
-  /* Light gray background */
-  box-sizing: border-box; /* Include padding in the width calculation */
+  min-height: 100vh;
+  box-sizing: border-box; 
   background-color: var(--header-background);
   color: var(--text-color);
 }
@@ -54,31 +41,19 @@
 }
 
 .searchInput {
-   
-  padding: 0.5rem;
+  padding: 0.8rem;
   border: 1px solid #ddd;
-  border-radius: 0.25rem;
+  border-radius: 0.45rem;
   font-size: 1rem;
   margin-bottom: 1rem; 
 }
-/* .searchBar input[type="text"] {
-  width: 75%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
- 
-} */
 
 .hotkeyKeys {
   text-align: center;
   font-weight: bold;
 }
 
-/* .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-} */
+
 
 .cardTitle {
   font-size: 1.2rem;
@@ -106,7 +81,7 @@
   justify-content: space-between;
   align-items: center;
   
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   
 }
 
@@ -123,14 +98,12 @@
   color: #fff;
 }
 
-/* Use a media query for smaller screens to adjust the grid layout */
 @media (max-width: 768px) {
   .dashboardContainer {
     grid-template-columns: 1fr;
   }
 }
 
-/* Define colors for icons and text based on the uploaded image style */
 .icon {
   width: 1rem;
   height: 1rem;
@@ -139,7 +112,7 @@
   margin-right: 0.5rem;
 }
 
-/* Custom scrollbar for modern look */
+
 ::-webkit-scrollbar {
   width: 0.7rem;
   
