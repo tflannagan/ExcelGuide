@@ -1,22 +1,45 @@
-import formulasData from "../data/formulasData"; // Adjust the path as needed
-import styles from "../components/DashboardPage.module.css"; // The CSS module for the dashboard
+import { useState } from "react";
+import formulasData from "../data/formulasData";
+import styles from "./DashboardPage.module.css"; // Assuming you have a common dashboard CSS module
 
 const FormulaPage = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredFormulas = searchTerm
+    ? formulasData.filter(
+        (formula) =>
+          formula.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          formula.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          formula.usage.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : formulasData;
+
   return (
     <div className={styles.dashboardContainer}>
-      <div className={styles.card}>
-        <h2 className={styles.cardTitle}>Excel Formulas</h2>
-        <ul className={styles.cardList}>
-          {formulasData.map((formula, index) => (
-            <li key={index} className={styles.cardItem}>
-              <span>
-                <strong>{formula.name}</strong>: {formula.description}
-              </span>
-              <code className={styles.code}>{formula.usage}</code>
-            </li>
-          ))}
-        </ul>
+      <div className={styles.searchBar}>
+        <input
+          type="text"
+          placeholder="Search formulas..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className={styles.searchInput} // Make sure you have styles for this
+        />
       </div>
+      {filteredFormulas.map((formula, index) => (
+        <div key={index} className={styles.card}>
+          <div className={styles.formulaContent}>
+            <h2 className={styles.cardTitle}>{formula.name}</h2>
+            <p className={styles.formulaDescription}>{formula.description}</p>
+            <code className={styles.formulaUsage}>{formula.usage}</code>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -1,22 +1,39 @@
+* {
+
+  padding: 0;
+  margin: 0;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+ 
+  background-color: rgba(99, 165, 156, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* 
-body {
-  background-image: url(../src/assets/logo2.png);
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
- background-blend-mode: overlay;
-} */
+
+
+
+.app.light {
+  --background-color: rgba(241, 241, 241, 0.83);
+  --text-color: #000000;
+}
+
+.app.dark {
+  --background-color: #2a2a2ac8;
+  --text-color: #e7e7e7;
+ 
+}
+
+body, .app {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 1rem;
+}

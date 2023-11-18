@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { ThemeContext } from "../context/ThemeContext";
+import Logo from "../assets/logo75.png";
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -10,21 +11,23 @@ const Header = () => {
     <header className={`${styles.header} ${styles[theme]}`}>
       <div className={styles.logo}>
         <Link to="/">
-          <a>Excel</a>
+          <a>
+            <img src={Logo} alt="img" />
+          </a>
         </Link>
       </div>
       <nav className={styles.navigation}>
         <ul>
-          <li>
+          <li className={styles.navTitle}>
             <Link to="/hotkeys">Hotkeys</Link>
           </li>
-          <li>
+          <li className={styles.navTitle}>
             <Link to="/formulas">Formulas</Link>
           </li>
         </ul>
       </nav>
       <button onClick={toggleTheme} className={styles.themeSwitcher}>
-        Switch Theme
+        💡
       </button>
     </header>
   );
