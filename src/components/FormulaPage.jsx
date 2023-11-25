@@ -1,6 +1,6 @@
 import { useState } from "react";
 import formulasData from "../data/formulasData";
-import styles from "./DashboardPage.module.css"; // Assuming you have a common dashboard CSS module
+import styles from "./DashboardPage.module.css"; 
 
 const FormulaPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,7 +28,7 @@ const FormulaPage = () => {
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
-          className={styles.searchInput} // Make sure you have styles for this
+          className={styles.searchInput} 
         />
       </div>
       {filteredFormulas.map((formula, index) => (

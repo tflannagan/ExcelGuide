@@ -80,15 +80,3 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
-/* Theme styles */
-/* .light {
-  --header-background: #eee; 
-  --header-color: #bababa;
-}
-
-.dark {
-  --header-background: #333; 
-  --header-color: #ddd;
-} */
-

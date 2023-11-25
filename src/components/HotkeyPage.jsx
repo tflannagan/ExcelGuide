@@ -1,6 +1,6 @@
 import { useState } from "react";
 import hotkeysData from "../data/hotkeysData";
-import styles from "./DashboardPage.module.css"; // Assuming you have a common dashboard CSS module
+import styles from "./DashboardPage.module.css";
 
 const HotkeyPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,7 +25,7 @@ const HotkeyPage = () => {
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
-          className={styles.searchInput} // Make sure you have styles for this
+          className={styles.searchInput}
         />
       </div>
       {filteredHotkeys.map((hotkey, index) => (

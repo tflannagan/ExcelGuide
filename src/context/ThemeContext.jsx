@@ -19,5 +19,5 @@ export const ThemeProvider = ({ children }) => {
 
 // PropType validation
 ThemeProvider.propTypes = {
-  children: PropTypes.node.isRequired, // Define the expected type for children
+  children: PropTypes.node.isRequired,
 };
