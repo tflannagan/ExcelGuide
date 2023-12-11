@@ -2,6 +2,8 @@
 
 Welcome to this comprehensive guide on Excel, encompassing a wide range of useful hotkeys and formulas to enhance your productivity and data analysis skills. Whether you're a beginner or an advanced user, this guide aims to provide valuable insights for everyone.
 
+### :computer: [Live Site](https://tflannagan.github.io/ExcelGuide/)
+
 ## Table of Contents 👓
 - [Introduction](#introduction)
 - [Hotkeys](#hotkeys)
@@ -43,5 +45,3 @@ Below are some examples used for Excel formulas:
 ## Contributing
 
 This project is purely for educational purposes, but thank you 🥰
-
-## :computer: [Live Site](https://tflannagan.github.io/ExcelGuide/)
