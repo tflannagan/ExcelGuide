@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { ThemeContext } from "./context/ThemeContext";
 import { useContext } from "react";
 
@@ -11,10 +11,13 @@ function App() {
   return (
     <div className={`app ${theme}`}>
       <Header />
-      <Routes>
-        <Route path="/hotkeys" element={<HotkeyPage />} />
-        <Route path="/formulas" element={<FormulaPage />} />
-      </Routes>
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Navigate to="/hotkeys" replace />} />
+          <Route path="/hotkeys" element={<HotkeyPage />} />
+          <Route path="/formulas" element={<FormulaPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }

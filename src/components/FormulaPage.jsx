@@ -1,45 +1,61 @@
 import { useState } from "react";
 import formulasData from "../data/formulasData";
-import styles from "./DashboardPage.module.css"; 
+import styles from "./DashboardPage.module.css";
 
 const FormulaPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedFormula, setSelectedFormula] = useState(null);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredFormulas = searchTerm
-    ? formulasData.filter(
-        (formula) =>
-          formula.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          formula.description
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
-          formula.usage.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    : formulasData;
+  const filteredFormulas = formulasData.filter(
+    (formula) =>
+      formula.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      formula.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      formula.usage.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className={styles.dashboardContainer}>
-      <div className={styles.searchBar}>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          className={styles.searchInput} 
-        />
-      </div>
-      {filteredFormulas.map((formula, index) => (
-        <div key={index} className={styles.card}>
-          <div className={styles.formulaContent}>
-            <h2 className={styles.cardTitle}>{formula.name}</h2>
-            <p className={styles.formulaDescription}>{formula.description}</p>
-            <code className={styles.formulaUsage}>{formula.usage}</code>
-          </div>
+      <div className={styles.searchPanel}>
+        <div className={styles.searchBar}>
+          <input
+            type="text"
+            placeholder="Search formulas..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className={styles.searchInput}
+          />
         </div>
-      ))}
+        <ul className={styles.itemList}>
+          {filteredFormulas.map((formula, index) => (
+            <li
+              key={index}
+              className={`${styles.itemListEntry} ${
+                selectedFormula === formula ? styles.active : ""
+              }`}
+              onClick={() => setSelectedFormula(formula)}
+            >
+              {formula.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.displayArea}>
+        {selectedFormula ? (
+          <div className={styles.card}>
+            <h2 className={styles.cardTitle}>{selectedFormula.name}</h2>
+            <p className={styles.formulaDescription}>
+              {selectedFormula.description}
+            </p>
+            <code className={styles.formulaUsage}>{selectedFormula.usage}</code>
+          </div>
+        ) : (
+          <p>Select a formula to view details</p>
+        )}
+      </div>
     </div>
   );
 };

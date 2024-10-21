@@ -1,39 +1,53 @@
 * {
-
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
+  --primary-color: #3a9679;
+  --secondary-color: #fff4e2;
+  --background-light: #f5f7fa;
+  --background-dark: #2a2a2a;
+  --text-light: #333333;
+  --primary-color-rgb: 74, 222, 128;
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --text-dark: #f3f1f1;
+  --header-background-light: #ffffff;
+  --header-background-dark: #1f1f1f;
+  --transition: all 0.3s ease;
+}
+
+body {
   font-family: 'Didact Gothic', sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
-
- 
-  background-color: rgba(99, 165, 156, 1);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: var(--transition);
 }
 
-
-
 .app.light {
-  --background-color: rgba(255, 253, 253, 0.904);
-  --text-color: #000000;
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+  --header-background: var(--header-background-light);
 }
 
 .app.dark {
-  --background-color: #2a2a2af4;
-  --text-color: #f3f1f1;
- 
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+  --header-background: var(--header-background-dark);
 }
 
-body, .app {
+.app {
   background-color: var(--background-color);
   color: var(--text-color);
-  border-radius: 10px;
+  min-height: 100vh;
   padding: 1.5rem;
+  transition: var(--transition);
 }
