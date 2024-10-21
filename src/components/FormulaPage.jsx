@@ -46,7 +46,6 @@ const FormulaPage = () => {
       <div className={styles.displayArea}>
         {selectedFormula ? (
           <div className={styles.card}>
-            <h2 className={styles.cardTitle}>{selectedFormula.name}</h2>
             <p className={styles.formulaDescription}>
               {selectedFormula.description}
             </p>
